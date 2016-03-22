@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom'; // ブラウザ = DOMに表示
+import React from 'react';
+import ReactDOM from 'react-dom'; // ブラウザ = DOMに表示
 
 // 表示するコンポーネント
 class HelloComponent extends React.Component {
