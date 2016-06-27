@@ -8,19 +8,20 @@ class HelloComponent extends React.Component {
   }
 }
 
+// 表示するコンポーネント2
 class AppComponent extends React.Component {
   render() {
     return (
       <section>
-        <h1>My Hello App!</h1>
-        <HelloComponent />
+        <h1>Hello App!</h1>
+        <HelloComponent></HelloComponent>
       </section>
     );
-    }
+  }
 }
 
 // 表示する先
 const $app = document.getElementById('app');
 
-// 表示！
+// 表示
 ReactDOM.render(<AppComponent />, $app);
