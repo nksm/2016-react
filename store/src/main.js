@@ -1,16 +1,16 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Header from './Header.jsx';
-import Container from './Container.jsx';
-import Footer from './Footer.jsx';
+import { fetchItemModel } from './util';
+
+import App from './component/App.jsx';
 
 const App extends React.Component {
-  render (
-    <Header />
-    <Container />
-    <Footer />
-  );
+  render () {
+    return (
+      <App />
+    )
+  }
 }
 
 window.addEventListener('load', () => {
@@ -24,9 +24,3 @@ window.addEventListener('load', () => {
       );
     });
 }, false);
-
-// 表示する先
-const $app = document.getElementById('app');
-
-// 表示！
-ReactDOM.render(<App />, $app);
