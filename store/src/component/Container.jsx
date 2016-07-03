@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import ItemList from './ItemList.js';
 import Cart from './Cart.js';
