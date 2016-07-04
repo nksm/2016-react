@@ -1,17 +1,9 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Header from './Header.jsx';
-import Container from './Container.jsx';
-import Footer from './Footer.jsx';
+import { fetchItemModel } from './util';
 
-const App extends React.Component {
-  render (
-    <Header />
-    <Container />
-    <Footer />
-  );
-}
+import App from './component/App.jsx';
 
 window.addEventListener('load', () => {
   // サーバーに商品リストをリクエストする関数
@@ -24,9 +16,3 @@ window.addEventListener('load', () => {
       );
     });
 }, false);
-
-// 表示する先
-const $app = document.getElementById('app');
-
-// 表示！
-ReactDOM.render(<App />, $app);
