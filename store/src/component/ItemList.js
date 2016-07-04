@@ -2,16 +2,35 @@ import React from 'react';
 
 import Item from './Item.js';
 
-const ItemList = () => {
+const ItemList = (props) => {
+  const {
+    items,
+    addToCart
+  } = props;
+  let Content;
+  Content = items.map((item, idx) => {
+    return (
+      <li
+        className="ItemList__item"
+        key={idx}
+      >
+        <Item
+          {...item}
+          onClickBtn={() => { addToCart(item); }}
+        />
+      </li>
+    );
+  })
   return (
     <ul className="ItemList">
-      <li className="ItemList__item">
-        <Item />
-      </li>
+      {Content}
     </ul>
   )
 }
 
-Item.propTypes = {}
+Item.propTypes = {
+  items: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  addToCart: React.PropTypes.func.isRequired,
+}
 
 export default ItemList;
